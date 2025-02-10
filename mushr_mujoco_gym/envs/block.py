@@ -138,8 +138,11 @@ class MushrBlockEnv(MujocoEnv, utils.EzPickle):
         # vel = self.unwrapped.data.qvel
 
         position = self.unwrapped.data.qpos.flatten()
+        velocity = self.unwrapped.data.qvel.flatten()
         car = position[:7].copy()
         block = position[-7:].copy()
+        car_vel = velocity[:6].copy()
+        block_vel = velocity[-6:].copy()
 
         # block_pos, block_quat = np.array(block[:3]), R.from_quat(np.roll(block[-4:], -1))
         # block_pos[2] = 0
@@ -157,7 +160,10 @@ class MushrBlockEnv(MujocoEnv, utils.EzPickle):
         
         car_no_z = np.concatenate([car[:2], car[-4:]])
         block_no_z = np.concatenate([block[:2], block[-4:]])
-
+        car_vel = np.concatenate([car_vel[:2], car_vel[-3:-1]])
+        block_vel = np.concatenate([block_vel[:2], block_vel[-3:-1]])
         return np.concatenate([np.array(block_no_z),
-                                np.array(car_no_z)])
+                                np.array(car_no_z),
+                                np.array(block_vel),
+                                np.array(car_vel)])
                             #   np.array([car_pos[0], car_pos[1], car_angle])])
