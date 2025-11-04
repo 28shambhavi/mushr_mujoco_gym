@@ -1,7 +1,5 @@
 from typing import Dict, Union
-
 import numpy as np
-
 import gymnasium as gym
 from gymnasium import utils
 from gymnasium.envs.mujoco import MujocoEnv
@@ -15,7 +13,6 @@ DEFAULT_CAMERA_CONFIG = {
     "trackbodyid": -1,
     "distance": 4.0,
 }
-
 
 class MultiAgentMushrBlockEnv(MujocoEnv, utils.EzPickle):
     """
@@ -148,9 +145,6 @@ class MultiAgentMushrBlockEnv(MujocoEnv, utils.EzPickle):
         return c
 
     def _get_obs(self):
-        # pos = self.unwrapped.data.qpos
-        # vel = self.unwrapped.data.qvel
-
         position = self.unwrapped.data.qpos.flatten()
         velocity = self.unwrapped.data.qvel.flatten()
         car = position[:7].copy()
