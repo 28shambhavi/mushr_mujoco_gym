@@ -30,7 +30,7 @@ class MultiAgentMushrBlockEnv(MujocoEnv, utils.EzPickle):
     }
     def __init__(
         self,
-        xml_file: str = "cuboid_block_obstacle_env1.xml",
+        xml_file: str = "env1.xml",
         frame_skip: int = 50,
         default_camera_config: Dict[str, Union[float, int]] = DEFAULT_CAMERA_CONFIG,
         cost_function = None,
