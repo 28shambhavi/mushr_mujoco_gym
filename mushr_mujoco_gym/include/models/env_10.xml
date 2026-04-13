@@ -26,6 +26,7 @@
     <geom type="box" contype="1" conaffinity="1" size="0.025000 2.000000 0.250000" rgba="0.11 0.024 0.345 1" pos="-1.50000 0.000000 0.250000"/>
     <geom type="box" contype="1" conaffinity="1" size="1.500000 0.025000 0.250000" rgba="0.11 0.024 0.345 1" pos="0.000000 -2.00000 0.250000"/>
     <geom type="box" contype="1" conaffinity="1" size="1.500000 0.025000 0.250000" rgba="0.11 0.024 0.345 1" pos="0.00000 2.000000 0.250000"/>
-<!--    <geom type="box" contype="1" conaffinity="1" size="0.7500000 0.150000 0.250000" rgba="0.11 0.024 0.345 1" pos="-.7500000 0.000000 0.250000"/>-->
+    <geom type="box" contype="1" conaffinity="1" size="0.3 0.300000 0.250000" rgba="0.11 0.024 0.345 1" pos="0.90000 -1.300000 0.250000"/>
+    <geom type="box" contype="1" conaffinity="1" size="0.3 0.300000 0.250000" rgba="0.11 0.024 0.345 1" pos="-0.90000 1.300000 0.250000"/>
   </worldbody>
 </mujoco>
